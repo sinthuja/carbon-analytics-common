@@ -35,6 +35,7 @@
         <module>components/data-bridge</module>
         <module>components/permission-provider</module>
         <module>components/org.wso2.carbon.database.query.manager</module>
+        <module>components/open-tracer</module>
         <module>features/authentication</module>
         <module>features/data-bridge</module>
         <module>features/permission-provider</module>
@@ -302,6 +303,16 @@
                 <artifactId>commons-lang3</artifactId>
                 <version>${commons-lang3.version}</version>
             </dependency>
+            <dependency>
+                <groupId>io.opentracing</groupId>
+                <artifactId>opentracing-api</artifactId>
+                <version>${open.tracing.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.opentracing</groupId>
+                <artifactId>opentracing-util</artifactId>
+                <version>${open.tracing.version}</version>
+            </dependency>
 
             <!-- OSGi test -->
             <dependency>
@@ -484,6 +495,11 @@
             <dependency>
                 <groupId>org.wso2.msf4j</groupId>
                 <artifactId>msf4j-core</artifactId>
+                <version>${msf4j.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.wso2.msf4j</groupId>
+                <artifactId>msf4j-open-tracing</artifactId>
                 <version>${msf4j.version}</version>
             </dependency>
             <dependency>
@@ -780,6 +796,7 @@
         <databridge.version.range>[6.0.0, 7.0.0)</databridge.version.range>
         <disruptor.version.range>[2.10.0,3.4)</disruptor.version.range>
         <org.wso2.json.version>3.0.0.wso2v1</org.wso2.json.version>
+        <open.tracing.version>0.30.0</open.tracing.version>
 
         <!-- Latest Dependencies -->
         <carbon.config.version>2.1.4</carbon.config.version>
@@ -805,7 +822,7 @@
         <carbon.messaging.version>3.0.1</carbon.messaging.version>
         <carbon.messaging.package.import.version.range>[0.0.0, 4.0.0)</carbon.messaging.package.import.version.range>
 
-        <msf4j.version>2.5.2</msf4j.version>
+        <msf4j.version>2.5.0-SNAPSHOT</msf4j.version>
         <msf4j.import.version.range>[2.5.0, 3.0.0)</msf4j.import.version.range>
 
         <com.fasterxml.jackson.core.version>2.7.4</com.fasterxml.jackson.core.version>
