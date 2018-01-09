@@ -146,13 +146,10 @@ public class AgentHolder {
                     throw new DataEndpointAgentConfigurationException("Error in when loading databridge agent " +
                             "configuration", e);
                 }
-
             }
-
             if (dataAgentsConfiguration != null) {
                 for (Agent agent : dataAgentsConfiguration.getAgents()) {
                     AgentConfiguration agentConfiguration = agent.getAgentConfiguration();
-
                     if (agentConfiguration.getTrustStorePath() == null ||
                             agentConfiguration.getTrustStorePath().isEmpty()) {
                         agentConfiguration.setTrustStorePath(System.getProperty("javax.net.ssl.trustStore"));
@@ -160,7 +157,6 @@ public class AgentHolder {
                             throw new DataEndpointAgentConfigurationException("No trustStore found");
                         }
                     }
-
                     if (agentConfiguration.getTrustStorePassword() == null ||
                             agentConfiguration.getTrustStorePassword().isEmpty()) {
                         agentConfiguration.setTrustStorePassword(System.getProperty(
@@ -169,7 +165,6 @@ public class AgentHolder {
                             throw new DataEndpointAgentConfigurationException("No trustStore password found");
                         }
                     }
-
                 }
             }
             return dataAgentsConfiguration;
